@@ -40,21 +40,38 @@ body {
 
 .section {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 20px 0;
     opacity: 0;
     animation: fadeIn 1s forwards;
     width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.section.left {
-    flex-direction: row;
+.section img.left {
+    /* flex-direction: row; */
+    width: 630px;
+    height: 630px;
+    margin-right: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.section.reverse {
+    flex-direction: row-reverse; /* Reverse the row direction */
+}
+
+.section .left {
+    flex: 1; /* Take up remaining space */
+    margin-right: 20px; /* Add space between the text and the image */
+}
+
+.section .right {
     width: 600px;
     height: 600px;
-}
-
-.section.right {
-    flex-direction: row-reverse;
+    flex-direction: 1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* margin-left: 100px; */
+    margin-left: 20px;
 }
 
 .section img {
